@@ -141,3 +141,12 @@
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-14px); }
 }
+
+@utility animate-hero-zoom {
+  animation: heroZoom 22s ease-in-out infinite alternate;
+}
+
+@keyframes heroZoom {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}

@@ -35,6 +35,7 @@ import {
 import doctorProfile from "@/assets/doctor-profile.jpg";
 import clinicLab from "@/assets/clinic-lab.jpg";
 import coupleCare from "@/assets/couple-care.jpg";
+import doctorHero from "@/assets/doctor-hero.jpg";
 import { Ear, MessageSquare, HandHeart } from "lucide-react";
 import { SiteHeader } from "@/components/site/header";
 import { SiteFooter } from "@/components/site/footer";
@@ -125,123 +126,6 @@ const treatmentsList = [
   }
 ];
 
-const journeySteps = [
-  {
-    step: "01",
-    phase: "Step 01 · Initial Intake",
-    duration: "Day 1 · 45-60 Mins",
-    title: "Comprehensive First Consultation",
-    icon: Stethoscope,
-    tagline: "Unrushed, empathetic listening & medical history review",
-    desc: "A relaxed, in-depth conversation discussing your medical background, previous test results, emotional concerns, and specific goals without any rushed time pressure.",
-    deliverables: [
-      "Evaluation of past scans & medical history",
-      "Detailed lifestyle, cycle & hormone intake",
-      "Open discussion answering all your questions",
-      "Recommendation of only essential tests"
-    ],
-    doctorQuote: "We listen first. Every couple's story is unique, and our first meeting is about understanding you, not pushing tests.",
-    theme: {
-      border: "border-teal-500/30",
-      bgGradient: "from-teal-500/15 via-card to-emerald-500/10",
-      accent: "text-teal-600 dark:text-teal-400",
-      badge: "bg-teal-500/15 text-teal-700 dark:text-teal-300 border-teal-500/30",
-      glow: "bg-teal-500/20"
-    }
-  },
-  {
-    step: "02",
-    phase: "Step 02 · Precise Evaluation",
-    duration: "Week 1 – 2",
-    title: "Targeted Diagnostics & Scans",
-    icon: Microscope,
-    tagline: "Focused precision testing — zero unnecessary procedures",
-    desc: "Targeted hormone evaluations, high-resolution ultrasound scans, semen analysis, and tubal patency assessments done under strict clinical protocols.",
-    deliverables: [
-      "High-resolution ultrasound & follicle tracking",
-      "Hormone profile (AMH, Thyroid, Prolactin, FSH/LH)",
-      "Computer-assisted semen analysis (CASA)",
-      "Transparent breakdown of diagnostic findings"
-    ],
-    doctorQuote: "We perform only evidence-based investigations to pinpoint root causes quickly while avoiding unnecessary financial stress.",
-    theme: {
-      border: "border-sky-500/30",
-      bgGradient: "from-sky-500/15 via-card to-blue-500/10",
-      accent: "text-sky-600 dark:text-sky-400",
-      badge: "bg-sky-500/15 text-sky-700 dark:text-sky-300 border-sky-500/30",
-      glow: "bg-sky-500/20"
-    }
-  },
-  {
-    step: "03",
-    phase: "Step 03 · Custom Strategy",
-    duration: "Week 2 – 3",
-    title: "Personalized Treatment Roadmap",
-    icon: CalendarHeart,
-    tagline: "Clear clinical milestones, transparent costs & timeline",
-    desc: "Dr. Priyanka discusses your customized treatment blueprint — whether gentle ovulation induction, IUI, IVF, or laparoscopic correction — with fixed timelines and transparent costs.",
-    deliverables: [
-      "Customized roadmap tailored to your diagnosis",
-      "Transparent fee breakdown with zero hidden costs",
-      "Medication schedule & success probability",
-      "Direct 24/7 coordinator support assignment"
-    ],
-    doctorQuote: "You will always know what to expect at every stage: the exact timeline, medications, and realistic success rates.",
-    theme: {
-      border: "border-indigo-500/30",
-      bgGradient: "from-indigo-500/15 via-card to-purple-500/10",
-      accent: "text-indigo-600 dark:text-indigo-400",
-      badge: "bg-indigo-500/15 text-indigo-700 dark:text-indigo-300 border-indigo-500/30",
-      glow: "bg-indigo-500/20"
-    }
-  },
-  {
-    step: "04",
-    phase: "Step 04 · Clinical Excellence",
-    duration: "Week 3 – 6",
-    title: "Advanced Assisted Treatment",
-    icon: FlaskConical,
-    tagline: "IUI, IVF, or surgery with continuous monitoring",
-    desc: "Gentle ovarian stimulation, precision follicle tracking scans, state-of-the-art embryo culture in world-class labs, and painless embryo transfer guided by Dr. Priyanka.",
-    deliverables: [
-      "Personalized stimulation protocol for optimal safety",
-      "Advanced embryology lab procedures (ICSI, Blastocyst)",
-      "Painless ultrasound-guided embryo transfer",
-      "Hormonal support and continuous WhatsApp updates"
-    ],
-    doctorQuote: "From monitoring each follicle to the embryo transfer, every procedure is personally overseen by Dr. Priyanka.",
-    theme: {
-      border: "border-purple-500/30",
-      bgGradient: "from-purple-500/15 via-card to-pink-500/10",
-      accent: "text-purple-600 dark:text-purple-400",
-      badge: "bg-purple-500/15 text-purple-700 dark:text-purple-300 border-purple-500/30",
-      glow: "bg-purple-500/20"
-    }
-  },
-  {
-    step: "05",
-    phase: "Step 05 · Motherhood & Beyond",
-    duration: "Months 1 – 9 & Delivery",
-    title: "Positive Pregnancy Care & Delivery",
-    icon: Baby,
-    tagline: "Early scans, antenatal guidance & safe delivery",
-    desc: "From your very first positive beta-hCG test and heartbeat confirmation scan through comprehensive antenatal monitoring to painless delivery.",
-    deliverables: [
-      "Early pregnancy viability & heartbeat sonography",
-      "Trimester-by-trimester nutrition & fetal monitoring",
-      "High-risk pregnancy safeguards & gestational care",
-      "Normal & painless delivery planning with same doctor"
-    ],
-    doctorQuote: "Holding your healthy baby in your arms is the ultimate destination of our shared journey.",
-    theme: {
-      border: "border-rose-500/30",
-      bgGradient: "from-rose-500/15 via-card to-amber-500/10",
-      accent: "text-rose-600 dark:text-rose-400",
-      badge: "bg-rose-500/15 text-rose-700 dark:text-rose-300 border-rose-500/30",
-      glow: "bg-rose-500/20"
-    }
-  }
-];
 
 const stats = [
   { value: "14+", label: "Years of experience" },
@@ -273,7 +157,6 @@ function SectionLabel({ children }: { children: string }) {
 
 function Home() {
   const [activeTab, setActiveTab] = useState(0);
-  const [activeJourneyStep, setActiveJourneyStep] = useState(0);
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
@@ -281,6 +164,17 @@ function Home() {
       <main>
         {/* HERO */}
         <section id="home" className="gradient-soft relative overflow-hidden">
+          {/* Animated Background Image with smooth Zoom In / Zoom Out */}
+          <div className="pointer-events-none absolute inset-0 overflow-hidden">
+            <img
+              src={doctorHero}
+              alt="Dr. Priyanka Singh Medical Care"
+              className="h-full w-full object-cover object-center animate-hero-zoom opacity-20 filter contrast-105"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/60" />
+            <div className="absolute inset-0 bg-gradient-to-t from-background/85 via-transparent to-transparent" />
+          </div>
+
           <div className="pointer-events-none absolute -top-28 -left-24 size-96 rounded-full bg-primary/15 blur-3xl" />
           <div className="pointer-events-none absolute top-32 -right-20 size-96 rounded-full bg-accent/15 blur-3xl" />
 
@@ -297,15 +191,15 @@ function Home() {
               </p>
 
               <div className="mt-9 flex flex-wrap gap-4">
-                <a
-                  href="#contact"
-                  className="gradient-brand inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-lift transition-transform hover:-translate-y-0.5"
+                <Link
+                  to="/contact"
+                  className="gradient-brand inline-flex items-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-lift transition-transform hover:-translate-y-0.5 cursor-pointer"
                 >
                   <CalendarHeart className="size-4" /> Book Consultation
-                </a>
+                </Link>
                 <a
-                  href="#fertility"
-                  className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-card px-7 py-3.5 text-sm font-semibold text-primary transition-colors hover:bg-primary-soft"
+                  href="#treatments"
+                  className="inline-flex items-center gap-2 rounded-full border border-primary/25 bg-card/80 backdrop-blur-sm px-7 py-3.5 text-sm font-semibold text-primary transition-colors hover:bg-primary-soft"
                 >
                   Explore Treatments
                 </a>
@@ -868,202 +762,118 @@ function Home() {
           </div>
         </section>
 
-        {/* YOUR JOURNEY - INTERACTIVE STAGE SHOWCASE */}
-        <section id="journey" className="mx-auto max-w-7xl px-6 py-24">
+        {/* CLINIC LOCATION & GOOGLE MAPS */}
+        <section id="location" className="mx-auto max-w-7xl px-6 py-24 border-t border-border">
           <Reveal className="max-w-3xl mx-auto text-center">
-            <SectionLabel>Your Journey</SectionLabel>
-            <h2 className="mt-5 text-3xl sm:text-4xl lg:text-5xl font-display text-foreground">
-              A Structured Roadmap to <span className="text-gradient">Motherhood</span>
+            <SectionLabel>Visit Our Clinic</SectionLabel>
+            <h2 className="mt-5 text-3xl sm:text-4xl lg:text-5xl font-display text-foreground leading-[1.15]">
+              Convenient Care in <span className="text-gradient">Bachupally, Hyderabad</span>
             </h2>
             <div className="mx-auto mt-6 h-1 w-24 rounded-full bg-gradient-brand"></div>
             <p className="mt-4 text-muted-foreground text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-              Every step is intentional, evidence-based, and guided personally by Dr. Priyanka Singh. Click each milestone below to explore what happens.
+              Dr. Priyanka Singh consults at Radiance Speciality Clinics. Centrally located in Bachupally with dedicated parking and modern diagnostic suites.
             </p>
           </Reveal>
 
-          {/* Stepper Navigation Nodes */}
-          <div className="mt-14 overflow-x-auto pb-4 -mx-6 px-6 sm:mx-0 sm:px-0">
-            <div className="min-w-[700px] lg:min-w-full">
-              <div className="relative grid grid-cols-5 gap-3">
-                {/* Connecting background progress track */}
-                <div className="pointer-events-none absolute top-7 left-12 right-12 h-1 bg-border z-0 hidden sm:block">
-                  <div
-                    className="h-full gradient-brand transition-all duration-500 rounded-full"
-                    style={{ width: `${(activeJourneyStep / (journeySteps.length - 1)) * 100}%` }}
-                  />
-                </div>
+          <div className="mt-14 grid gap-10 lg:grid-cols-12 items-stretch">
+            {/* Left Card: Location & Timing Details */}
+            <Reveal className="lg:col-span-5 flex flex-col justify-between">
+              <div className="h-full rounded-3xl border border-border bg-card p-8 shadow-soft flex flex-col justify-between space-y-6">
+                <div>
+                  <div className="flex items-center gap-3">
+                    <span className="gradient-brand grid size-12 place-items-center rounded-2xl text-lg font-semibold text-primary-foreground shadow-soft">
+                      PS
+                    </span>
+                    <div>
+                      <h3 className="font-display text-xl font-semibold text-foreground">Radiance Speciality Clinics</h3>
+                      <p className="text-xs text-muted-foreground">Dr. Priyanka Singh (MBBS, DGO, DRM)</p>
+                    </div>
+                  </div>
 
-                {journeySteps.map((step, idx) => {
-                  const Icon = step.icon;
-                  const isActive = activeJourneyStep === idx;
-                  const isPassed = activeJourneyStep > idx;
-                  return (
-                    <button
-                      key={step.step}
-                      onClick={() => setActiveJourneyStep(idx)}
-                      className={`group relative z-10 flex flex-col items-center text-center p-3 rounded-2xl transition-all duration-300 cursor-pointer ${
-                        isActive
-                          ? "bg-card shadow-lift border border-primary/30 scale-105"
-                          : "hover:bg-card/60 opacity-80 hover:opacity-100"
-                      }`}
-                    >
-                      {/* Node circle */}
-                      <div
-                        className={`size-14 rounded-2xl grid place-items-center font-display font-bold text-base transition-all duration-300 shadow-sm ${
-                          isActive
-                            ? "gradient-brand text-primary-foreground shadow-lift ring-4 ring-primary/20 scale-110"
-                            : isPassed
-                            ? "bg-primary-soft text-primary border border-primary/30"
-                            : "bg-muted text-muted-foreground border border-border"
-                        }`}
-                      >
-                        <Icon className="size-6" />
+                  <div className="mt-8 space-y-5">
+                    {/* Address */}
+                    <div className="flex items-start gap-4">
+                      <div className="grid size-11 place-items-center rounded-2xl bg-primary-soft text-primary shrink-0">
+                        <MapPin className="size-5" />
                       </div>
-
-                      <span className="mt-3 text-[11px] font-bold tracking-wider uppercase text-primary">
-                        {step.phase.split(" · ")[0]}
-                      </span>
-                      <span className={`mt-1 text-xs font-semibold line-clamp-1 ${isActive ? "text-foreground" : "text-muted-foreground"}`}>
-                        {step.title.split(" ")[0]} {step.title.split(" ")[1] || ""}
-                      </span>
-                      <span className="mt-1 text-[10px] text-muted-foreground/80 px-2 py-0.5 rounded-full bg-muted/60">
-                        {step.duration}
-                      </span>
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-
-          {/* Active Step Detailed Spotlight Card */}
-          <div className="mt-8">
-            <Reveal key={activeJourneyStep}>
-              {(() => {
-                const current = journeySteps[activeJourneyStep];
-                const Icon = current.icon;
-                return (
-                  <div className={`relative overflow-hidden rounded-[2.5rem] border ${current.theme.border} bg-gradient-to-br ${current.theme.bgGradient} p-8 sm:p-12 lg:p-14 shadow-lift transition-all duration-500`}>
-                    <div className={`pointer-events-none absolute -top-32 -right-32 size-[400px] rounded-full ${current.theme.glow} blur-3xl`} />
-                    <div className="pointer-events-none absolute -bottom-32 -left-32 size-[400px] rounded-full bg-primary/10 blur-3xl" />
-
-                    <div className="relative grid gap-10 lg:grid-cols-12 items-center">
-                      {/* Left details */}
-                      <div className="lg:col-span-7 space-y-6">
-                        <div className="flex flex-wrap items-center gap-3">
-                          <span className={`inline-flex items-center gap-1.5 rounded-full px-3.5 py-1 text-xs font-bold uppercase tracking-wider border ${current.theme.badge}`}>
-                            <Icon className="size-3.5" /> {current.phase}
-                          </span>
-                          <span className="flex items-center gap-1.5 text-xs font-semibold text-muted-foreground bg-card/80 border border-border px-3 py-1 rounded-full">
-                            <Clock className="size-3.5 text-primary" /> {current.duration}
-                          </span>
-                        </div>
-
-                        <div>
-                          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-display text-foreground font-semibold leading-tight">
-                            {current.title}
-                          </h3>
-                          <p className={`mt-2 text-sm sm:text-base font-medium ${current.theme.accent}`}>
-                            {current.tagline}
-                          </p>
-                        </div>
-
-                        <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-                          {current.desc}
+                      <div>
+                        <h4 className="text-sm font-semibold text-foreground">Clinic Address</h4>
+                        <p className="text-xs sm:text-sm text-muted-foreground leading-relaxed mt-1">
+                          Flat No: 201, B-Block, Sree Hanuman's Pagadala Pride, Bachupally, Medchal Malkajgiri Dist, Hyderabad, Telangana - 500090
                         </p>
-
-                        {/* Deliverables checklist */}
-                        <div className="pt-2">
-                          <p className="text-xs font-bold uppercase tracking-wider text-foreground mb-3">
-                            Key Milestones & Clinical Focus:
-                          </p>
-                          <div className="grid gap-2.5 sm:grid-cols-2">
-                            {current.deliverables.map((item, idx) => (
-                              <div key={idx} className="flex items-start gap-2.5 p-2.5 rounded-xl bg-card/70 border border-border/80 text-xs sm:text-sm">
-                                <span className="grid size-5 place-items-center rounded-full bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 font-bold shrink-0 mt-0.5">
-                                  ✓
-                                </span>
-                                <span className="text-muted-foreground leading-snug">{item}</span>
-                              </div>
-                            ))}
-                          </div>
-                        </div>
+                        <span className="inline-block mt-1.5 text-xs font-semibold text-accent bg-accent-soft px-3 py-0.5 rounded-full">
+                          Landmark: Above Domino's Pizza
+                        </span>
                       </div>
+                    </div>
 
-                      {/* Right Doctor quote card & Navigation */}
-                      <div className="lg:col-span-5 flex flex-col justify-between h-full space-y-6">
-                        <div className="rounded-3xl bg-card/90 border border-border/90 p-7 shadow-soft backdrop-blur relative overflow-hidden">
-                          <div className="absolute top-4 right-4 text-primary/10">
-                            <Quote className="size-16" />
-                          </div>
-                          <div className="flex items-center gap-3 mb-4">
-                            <div className="size-10 rounded-full overflow-hidden border border-primary/30 shadow-sm shrink-0">
-                              <img src={doctorProfile} alt="Dr. Priyanka" className="w-full h-full object-cover" />
-                            </div>
-                            <div>
-                              <p className="text-sm font-semibold text-foreground">Dr. Priyanka Singh</p>
-                              <p className="text-[11px] text-muted-foreground">Clinical Director</p>
-                            </div>
-                          </div>
-                          <blockquote className="text-xs sm:text-sm text-muted-foreground italic leading-relaxed relative z-10">
-                            "{current.doctorQuote}"
-                          </blockquote>
-                        </div>
+                    {/* Timings */}
+                    <div className="flex items-start gap-4">
+                      <div className="grid size-11 place-items-center rounded-2xl bg-primary-soft text-primary shrink-0">
+                        <Clock className="size-5" />
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-semibold text-foreground">Consultation Hours</h4>
+                        <p className="text-xs sm:text-sm text-foreground font-medium mt-1">
+                          Mon – Sat : 9:00 AM – 9:00 PM
+                        </p>
+                        <p className="text-xs text-rose-500 font-semibold mt-0.5">Sunday : Closed</p>
+                      </div>
+                    </div>
 
-                        {/* Step Carousel Navigation Controls */}
-                        <div className="flex items-center justify-between gap-4 pt-2">
-                          <button
-                            disabled={activeJourneyStep === 0}
-                            onClick={() => setActiveJourneyStep((prev) => Math.max(0, prev - 1))}
-                            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-border bg-card text-xs font-semibold text-foreground hover:bg-muted disabled:opacity-40 disabled:cursor-not-allowed transition-all shadow-sm cursor-pointer"
-                          >
-                            <ArrowLeft className="size-4" /> Previous Step
-                          </button>
-
-                          <span className="text-xs font-bold text-muted-foreground">
-                            {activeJourneyStep + 1} of {journeySteps.length}
-                          </span>
-
-                          <button
-                            disabled={activeJourneyStep === journeySteps.length - 1}
-                            onClick={() => setActiveJourneyStep((prev) => Math.min(journeySteps.length - 1, prev + 1))}
-                            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full gradient-brand text-xs font-semibold text-primary-foreground hover:opacity-90 disabled:opacity-40 disabled:cursor-not-allowed transition-all shadow-lift cursor-pointer"
-                          >
-                            Next Step <ArrowRight className="size-4" />
-                          </button>
-                        </div>
+                    {/* Phone */}
+                    <div className="flex items-start gap-4">
+                      <div className="grid size-11 place-items-center rounded-2xl bg-primary-soft text-primary shrink-0">
+                        <Phone className="size-5" />
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-semibold text-foreground">Appointments & Inquiries</h4>
+                        <a
+                          href="tel:+917995574432"
+                          className="text-base font-semibold text-primary hover:underline mt-1 block"
+                        >
+                          +91 7995574432
+                        </a>
                       </div>
                     </div>
                   </div>
-                );
-              })()}
-            </Reveal>
-          </div>
+                </div>
 
-          {/* Quick Overview 5-Grid Mini Roadmap Cards */}
-          <div className="mt-8 grid gap-4 grid-cols-2 sm:grid-cols-3 lg:grid-cols-5">
-            {journeySteps.map((j, i) => {
-              const Icon = j.icon;
-              const isSelected = activeJourneyStep === i;
-              return (
-                <button
-                  key={j.step}
-                  onClick={() => setActiveJourneyStep(i)}
-                  className={`text-left rounded-2xl border p-4 transition-all duration-300 cursor-pointer ${
-                    isSelected
-                      ? `bg-gradient-to-br ${j.theme.bgGradient} ${j.theme.border} shadow-lift scale-102`
-                      : "bg-card/80 border-border hover:border-primary/30 hover:bg-card"
-                  }`}
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="font-display text-lg font-bold text-primary/40">{j.step}</span>
-                    <Icon className={`size-4 ${isSelected ? j.theme.accent : "text-muted-foreground"}`} />
-                  </div>
-                  <h4 className="mt-2 text-xs font-semibold text-foreground line-clamp-1">{j.title}</h4>
-                  <p className="mt-1 text-[11px] text-muted-foreground line-clamp-1">{j.duration}</p>
-                </button>
-              );
-            })}
+                {/* CTAs */}
+                <div className="pt-4 border-t border-border flex flex-col sm:flex-row gap-3">
+                  <a
+                    href="https://maps.app.goo.gl/Mr6E1aXrxxtD85XZ7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="gradient-brand flex-1 inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-xs font-semibold text-primary-foreground shadow-lift hover:-translate-y-0.5 transition-all"
+                  >
+                    <MapPin className="size-4" /> Open in Google Maps
+                  </a>
+                  <a
+                    href="https://wa.me/917995574432?text=Hello%20Dr.%20Priyanka%20Singh,%20I%20would%20like%20to%20inquire%20about%20clinic%20consultations."
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 inline-flex items-center justify-center gap-2 rounded-xl border border-emerald-500/40 bg-emerald-500/10 text-emerald-700 dark:text-emerald-400 px-5 py-3 text-xs font-semibold hover:bg-emerald-500/20 transition-all text-center"
+                  >
+                    Chat on WhatsApp
+                  </a>
+                </div>
+              </div>
+            </Reveal>
+
+            {/* Right Card: Embedded Google Map */}
+            <Reveal className="lg:col-span-7 h-full" delay={150}>
+              <div className="h-full min-h-[420px] rounded-3xl overflow-hidden border border-border bg-card shadow-soft relative">
+                <iframe
+                  title="Dr. Priyanka Singh - Radiance Speciality Clinics Location Map"
+                  src="https://maps.google.com/maps?q=Pagadala+Pride+Bachupally+Hyderabad+Telangana+500090&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                  className="w-full h-full min-h-[420px] border-0"
+                  loading="lazy"
+                  allowFullScreen
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
+              </div>
+            </Reveal>
           </div>
         </section>
 
@@ -1137,129 +947,36 @@ function Home() {
           </div>
         </section>
 
-        {/* BOOK A CONSULTATION / CTA SECTION - COMPLETELY REDESIGNED */}
-        <section id="contact" className="mx-auto max-w-7xl px-6 pb-24">
+        {/* CALL TO ACTION BANNER */}
+        <section className="mx-auto max-w-7xl px-6 pb-24">
           <Reveal>
-            <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-br from-primary-soft/40 via-card to-accent-soft/30 border border-primary/20 p-8 sm:p-12 lg:p-16 shadow-lift">
-              <div className="pointer-events-none absolute -top-32 -right-32 size-[450px] rounded-full bg-accent/15 blur-3xl" />
-              <div className="pointer-events-none absolute -bottom-32 -left-32 size-[450px] rounded-full bg-primary/15 blur-3xl" />
-
-              <div className="relative grid gap-12 lg:grid-cols-12 items-center">
-                {/* Left Column: Direct Consultation Info */}
-                <div className="lg:col-span-6 space-y-6">
-                  <span className="inline-flex items-center gap-2 rounded-full bg-primary-soft px-4 py-1.5 text-xs font-semibold tracking-[0.18em] text-primary uppercase border border-primary/20">
-                    <Sparkles className="size-3.5" /> Direct Consultation
-                  </span>
-                  <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display leading-tight text-foreground">
-                    Book an Appointment with <span className="text-gradient">Dr. Priyanka Singh</span>
-                  </h2>
-                  <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
-                    Take the first step towards compassionate, expert care. Schedule your visit at Radiance Speciality Clinics to discuss your health, scans, and treatments in a warm, confidential setting.
-                  </p>
-
-                  <div className="space-y-4 pt-2">
-                    <div className="flex items-center gap-4 p-4 rounded-2xl bg-card/80 border border-border shadow-sm">
-                      <div className="grid size-12 place-items-center rounded-xl bg-primary-soft text-primary shrink-0">
-                        <Phone className="size-5" />
-                      </div>
-                      <div>
-                        <p className="text-xs text-muted-foreground">Direct Appointment Line</p>
-                        <a href="tel:+917995574432" className="text-base font-semibold text-primary hover:underline">
-                          +91 7995574432
-                        </a>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center gap-4 p-4 rounded-2xl bg-card/80 border border-border shadow-sm">
-                      <div className="grid size-12 place-items-center rounded-xl bg-accent-soft text-accent shrink-0">
-                        <Clock className="size-5" />
-                      </div>
-                      <div>
-                        <p className="text-xs text-muted-foreground">OPD Timings</p>
-                        <p className="text-sm font-semibold text-foreground">Mon – Sat: 9:00 AM – 9:00 PM</p>
-                      </div>
-                    </div>
-
-                    <div className="flex items-center gap-4 p-4 rounded-2xl bg-card/80 border border-border shadow-sm">
-                      <div className="grid size-12 place-items-center rounded-xl bg-primary-soft text-primary shrink-0">
-                        <MapPin className="size-5" />
-                      </div>
-                      <div>
-                        <p className="text-xs text-muted-foreground">Clinic Location</p>
-                        <p className="text-sm font-semibold text-foreground">Bachupally, Medchal Malkajgiri, Hyderabad</p>
-                        <p className="text-[11px] text-accent font-medium mt-0.5">Above Dominos Pizza · Pagadala Pride</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Right Column: Quick Booking Form */}
-                <div className="lg:col-span-6">
-                  <div className="rounded-3xl bg-card/95 border border-primary/20 p-8 shadow-2xl backdrop-blur-sm">
-                    <h3 className="text-xl font-display text-primary font-semibold mb-1">Schedule Appointment Slot</h3>
-                    <p className="text-xs text-muted-foreground mb-6">Our patient care coordinator will call you back within a few hours to confirm your timing.</p>
-
-                    <form
-                      onSubmit={(e) => {
-                        e.preventDefault();
-                        alert("Thank you! Your appointment request has been submitted. Our team will call you at +91 7995574432 shortly.");
-                      }}
-                      className="space-y-4"
-                    >
-                      <div>
-                        <label className="block text-xs font-semibold text-muted-foreground uppercase mb-1">Your Full Name</label>
-                        <input
-                          required
-                          type="text"
-                          placeholder="e.g. Anitha Sharma"
-                          className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary transition-colors"
-                        />
-                      </div>
-
-                      <div className="grid gap-4 sm:grid-cols-2">
-                        <div>
-                          <label className="block text-xs font-semibold text-muted-foreground uppercase mb-1">Phone Number</label>
-                          <input
-                            required
-                            type="tel"
-                            placeholder="Mobile number"
-                            className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary transition-colors"
-                          />
-                        </div>
-                        <div>
-                          <label className="block text-xs font-semibold text-muted-foreground uppercase mb-1">Specialty Service</label>
-                          <select className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary transition-colors">
-                            <option>Fertility & IVF Consultation</option>
-                            <option>Pregnancy Care / Antenatal</option>
-                            <option>PCOS / Ovulation Care</option>
-                            <option>Cosmetic Gynecology</option>
-                            <option>Laparoscopic Keyhole Surgery</option>
-                            <option>General Gynecology</option>
-                          </select>
-                        </div>
-                      </div>
-
-                      <div>
-                        <label className="block text-xs font-semibold text-muted-foreground uppercase mb-1">Brief Medical Concern (Optional)</label>
-                        <textarea
-                          rows={3}
-                          placeholder="Tell us briefly about your concern or preferred appointment day..."
-                          className="w-full rounded-xl border border-border bg-background px-4 py-3 text-sm outline-none focus:border-primary transition-colors resize-none"
-                        />
-                      </div>
-
-                      <button
-                        type="submit"
-                        className="w-full gradient-brand inline-flex items-center justify-center gap-2 rounded-xl px-6 py-4 text-sm font-semibold text-primary-foreground shadow-lift hover:-translate-y-0.5 transition-all mt-2 cursor-pointer"
-                      >
-                        <CalendarHeart className="size-5" /> Request Appointment Slot
-                      </button>
-
-                      <div className="flex items-center justify-center gap-2 pt-2 text-[11px] text-muted-foreground">
-                        <ShieldCheck className="size-4 text-emerald-500" /> 100% Confidential Patient Care
-                      </div>
-                    </form>
-                  </div>
+            <div className="relative overflow-hidden rounded-[2.5rem] gradient-deep p-10 sm:p-14 text-center text-primary-foreground shadow-lift">
+              <div className="pointer-events-none absolute -top-24 -right-24 size-80 rounded-full bg-accent/25 blur-3xl" />
+              <div className="pointer-events-none absolute -bottom-24 -left-24 size-80 rounded-full bg-primary/30 blur-3xl" />
+              
+              <div className="relative mx-auto max-w-2xl space-y-6">
+                <span className="inline-flex items-center gap-2 rounded-full bg-primary-foreground/15 px-4 py-1.5 text-xs font-semibold tracking-[0.18em] uppercase backdrop-blur">
+                  <Sparkles className="size-3.5 text-accent" /> Personalized Healthcare
+                </span>
+                <h2 className="text-3xl sm:text-4xl lg:text-5xl font-display leading-tight">
+                  Ready to Start Your Journey?
+                </h2>
+                <p className="text-sm sm:text-base opacity-85 leading-relaxed">
+                  Book your confidential consultation with Dr. Priyanka Singh today. We are here to listen, guide, and support you every step of the way.
+                </p>
+                <div className="pt-2 flex flex-wrap justify-center gap-4">
+                  <Link
+                    to="/contact"
+                    className="inline-flex items-center gap-2 rounded-full bg-card px-8 py-3.5 text-sm font-semibold text-primary shadow-lift transition-transform hover:-translate-y-0.5 hover:bg-card/90 cursor-pointer"
+                  >
+                    <CalendarHeart className="size-4" /> Book Appointment on WhatsApp
+                  </Link>
+                  <a
+                    href="tel:+917995574432"
+                    className="inline-flex items-center gap-2 rounded-full border border-primary-foreground/30 bg-primary-foreground/10 px-8 py-3.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-foreground/20 backdrop-blur-sm"
+                  >
+                    <Phone className="size-4" /> Call +91 7995574432
+                  </a>
                 </div>
               </div>
             </div>

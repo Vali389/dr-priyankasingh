@@ -27,7 +27,7 @@ const columns = [
     items: [
       { label: "About Dr. Priyanka", href: "/about" },
       { label: "Our Services & Treatments", href: "/services" },
-      { label: "Treatment Journey", href: "/#journey" },
+      { label: "Clinic Location", href: "/#location" },
       { label: "FAQs", href: "/#faq" },
       { label: "Book Appointment", href: "/contact" },
     ],

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="brandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f766e" />
+      <stop offset="50%" stop-color="#0d9488" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#14b8a6" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#0f766e" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background rounded squircle -->
+  <rect width="64" height="64" rx="18" fill="#042f2e" />
+  <circle cx="32" cy="32" r="28" fill="url(#glow)" />
+
+  <!-- Medical cross / bloom motif -->
+  <g transform="translate(32, 32)">
+    <!-- Stylized caring heart petals (fertility & gynecology) -->
+    <path
+      d="M 0 -16 C -11 -26 -24 -11 -15 3 C -9 11 0 20 0 20 C 0 20 9 11 15 3 C 24 -11 11 -26 0 -16 Z"
+      fill="url(#brandGrad)"
+      opacity="0.95"
+    />
+    <!-- Inner bloom petal / new life emblem -->
+    <path
+      d="M 0 -9 C -6 -16 -14 -7 -9 2 C -5 7 0 13 0 13 C 0 13 5 7 9 2 C 14 -7 6 -16 0 -9 Z"
+      fill="url(#goldGrad)"
+    />
+    <!-- Delicate central star / spark of life -->
+    <circle cx="0" cy="-2" r="2.5" fill="#ffffff" />
+  </g>
+</svg>
